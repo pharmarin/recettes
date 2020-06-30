@@ -1,2 +1,3 @@
-# recettes
-Recettes de Marin
+# Recettes de Marin
+
+Ce repository contient les documents pour les Github Pages
