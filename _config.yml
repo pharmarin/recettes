@@ -19,6 +19,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Recettes de famille
 baseurl: "/recettes" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
+permalink: /:categories/:title:output_ext
 twitter_username: l_exomil
 github_username:  pharmarin
 
