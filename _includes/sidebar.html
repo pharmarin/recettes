@@ -1,0 +1,99 @@
+<div id="sidebar" class="sidebar">
+  <header id="masthead" class="site-header" role="banner">
+    <div class="site-branding">
+      <a href="{{ "/" | absolute_url }}" class="custom-logo-link" rel="home">
+        <img width="248" height="250"
+          src="{{ "/assets/images/logo.png" | relative_url }}" class="custom-logo"
+          alt="Recettes">
+      </a>
+      <h1 class="site-title">
+        <a href="{{ "/" | absolute_url }}" rel="home">{{ site.title }}</a>
+      </h1>
+      <p class="site-description">{{ site.description }}</p>
+      <button class="secondary-toggle">Menu et widgets</button>
+    </div>
+  </header>
+  <div id="secondary" class="secondary">
+    <div id="widget-area" class="widget-area" role="complementary">
+      <aside class="widget widget_categories">
+        <nav id="site-navigation" class="main-navigation" role="navigation">
+          <div class="menu-menu-principal-container">
+            <ul id="menu-menu-principal" class="nav-menu">
+              {% comment %}<li id="menu-item-1444"
+                class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-1444"><a
+                  href="https://recettes.marionetmarin.fr/category/sale/">Salé</a><button class="dropdown-toggle"
+                  aria-expanded="false"><span class="screen-reader-text">ouvrir le sous-menu</span></button>
+                <ul class="sub-menu">
+                  <li id="menu-item-1453" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1453"><a
+                      href="https://recettes.marionetmarin.fr/category/sale/aperitif/">Apéritif</a></li>
+                  <li id="menu-item-1450" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1450"><a
+                      href="https://recettes.marionetmarin.fr/category/sale/entree/">Entrée</a></li>
+                  <li id="menu-item-1445" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1445"><a
+                      href="https://recettes.marionetmarin.fr/category/sale/plat/">Plat</a></li>
+                  <li id="menu-item-1448" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1448"><a
+                      href="https://recettes.marionetmarin.fr/category/sale/accompagnement/">Accompagnement</a></li>
+                  <li id="menu-item-1455" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1455"><a
+                      href="https://recettes.marionetmarin.fr/category/sale/soupe/">Soupe</a></li>
+                  <li id="menu-item-1454" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1454"><a
+                      href="https://recettes.marionetmarin.fr/category/sale/pain/">Pain</a></li>
+                  <li id="menu-item-1461" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1461"><a
+                      href="https://recettes.marionetmarin.fr/category/sale/divers/">Divers</a></li>
+                </ul>
+              </li>
+              <li id="menu-item-1446"
+                class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-1446"><a
+                  href="https://recettes.marionetmarin.fr/category/sucre/">Sucré</a><button class="dropdown-toggle"
+                  aria-expanded="false"><span class="screen-reader-text">ouvrir le sous-menu</span></button>
+                <ul class="sub-menu">
+                  <li id="menu-item-1449" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1449"><a
+                      href="https://recettes.marionetmarin.fr/category/sucre/dessert/">Dessert</a></li>
+                  <li id="menu-item-1447" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1447"><a
+                      href="https://recettes.marionetmarin.fr/category/sucre/gateau/">Gâteau</a></li>
+                  <li id="menu-item-1460" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1460"><a
+                      href="https://recettes.marionetmarin.fr/category/sucre/entremet/">Entremet</a></li>
+                  <li id="menu-item-1452" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1452"><a
+                      href="https://recettes.marionetmarin.fr/category/sucre/biscuit/">Biscuit</a></li>
+                  <li id="menu-item-1456" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1456"><a
+                      href="https://recettes.marionetmarin.fr/category/sucre/tarte/">Tarte</a></li>
+                  <li id="menu-item-1451" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1451"><a
+                      href="https://recettes.marionetmarin.fr/category/sucre/compote/">Compote, confiture ou fruits au sirop</a>
+                  </li>
+                  <li id="menu-item-1462" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1462"><a
+                      href="https://recettes.marionetmarin.fr/category/sucre/glace/">Glace</a></li>
+                  <li id="menu-item-1459" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1459"><a
+                      href="https://recettes.marionetmarin.fr/category/sucre/friandise/">Friandise</a></li>
+                </ul>
+              </li>
+              <li id="menu-item-1457"
+                class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-1457"><a
+                  href="https://recettes.marionetmarin.fr/category/boissons/">Boissons</a><button class="dropdown-toggle"
+                  aria-expanded="false"><span class="screen-reader-text">ouvrir le sous-menu</span></button>
+                <ul class="sub-menu">
+                  <li id="menu-item-1458" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1458"><a
+                      href="https://recettes.marionetmarin.fr/category/boissons/hard_drink/">Boisson alcoolisée</a></li>
+                </ul>
+              </li>{% endcomment %}
+              {% assign categories = site.categories | sort %}
+              {% for category in categories %}
+              <li class="menu-item menu-item-type-taxonomy menu-item-object-category">
+                <a href="{{ category | first | slugify | append: "/index.html" | prepend: "/" | relative_url }}">
+                  {{ category[0] | replace:'-', ' ' }}
+                </a>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </nav>
+      </aside>
+      <aside class="widget widget_search">
+        <form role="search" method="get" class="search-form" action="search.html">
+          <label>
+            <span class="screen-reader-text">검색:</span>
+            <input type="search" class="search-field" placeholder="Rechercher" value="" name="s" />
+          </label>
+          <input type="submit" class="search-submit screen-reader-text" value="Rechercher" />
+        </form>
+      </aside>
+    </div>
+  </div>
+</div>

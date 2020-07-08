@@ -1,0 +1,23 @@
+<nav class="navigation post-navigation" role="navigation">
+  <h2 class="screen-reader-text">Navigation</h2>
+  <div class="nav-links">
+    {% if include.post.previous.url %}
+    <div class="nav-previous">
+      <a href="{{ include.post.previous.url | relative_url }}" rel="prev">
+        <span class="meta-nav" aria-hidden="true">Précédent</span>
+        <span class="screen-reader-text">Recette précédente :</span>
+        <span class="post-title">{{ include.post.previous.title }}</span>
+      </a>
+    </div>
+    {% endif %}
+    {% if include.post.next.url %}
+    <div class="nav-next">
+      <a href="{{ include.post.next.url | relative_url }}" rel="next">
+        <span class="meta-nav" aria-hidden="true">Suivant</span>
+        <span class="screen-reader-text">Recette suivante :</span>
+        <span class="post-title">{{ include.post.next.title }}</span>
+      </a>
+    </div>
+    {% endif %}
+  </div>
+</nav>

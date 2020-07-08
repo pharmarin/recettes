@@ -1,0 +1,14 @@
+---
+layout: default
+---
+
+{% for post in page.posts %}
+<article class="post type-post status-publish format-standard hentry">
+  <header class="entry-header">
+    <h2 class="entry-title">
+      <a href="{{ post.url | prepend: site.baseurl }}" rel="bookmark">{{ post.title }}</a>
+    </h2>
+  </header>
+  {% include post_footer.html post=post %}
+</article>
+{% endfor %}

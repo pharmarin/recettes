@@ -1,0 +1,54 @@
+/*
+ Theme Name:   Recettes
+ Theme URI:
+ Description:  Twenty Fifteen Child Theme
+ Author:       Marin ROUX
+ Author URI:
+ Template:     twentyfifteen
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  twenty-fifteen
+*/
+
+.site-branding {
+  text-align: center;
+}
+
+.site-title {
+  margin-top: 1em;
+}
+
+.site-title, .site-description {
+  background-color: #E53A51;
+}
+
+.site-title a, .site-description {
+    color: #ffffff;
+}/* Sidebar Text Color */
+
+.site-title a:hover, .site-title a:focus {
+    color: rgba(255, 255, 255, 0.7);
+}/* Sidebar Border Color */
+
+.menu-menu-principal-container {
+  background-color: #E53A51;
+  padding: 1em;
+}
+
+.hentry.compressed .hentry {
+  margin-top: 0;
+  padding-top: 0;
+  padding-bottom: 4.2%;
+}
+.hentry.compressed .entry-header {
+  padding: 0;
+}
+.hentry.compressed .entry-header h2 {
+  margin-bottom: 0;
+}
+.hentry.compressed .entry-footer {
+  padding: 1em 0;
+  background-color: unset;
+}

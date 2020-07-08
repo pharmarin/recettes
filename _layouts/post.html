@@ -1,0 +1,15 @@
+---
+layout: default
+---
+<article class="post type-post status-publish format-standard hentry">
+  <header class="entry-header">
+    <h2 class="entry-title">
+      <a href="{{ post.url | prepend: site.baseurl }}" rel="bookmark">{{ page.title }}</a>
+    </h2>
+  </header>
+  <div class="entry-content">
+    {{ content }}
+  </div>
+  {% include post_footer.html post=page %}
+</article>
+{% include post_navigation.html post=page %}

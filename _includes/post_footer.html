@@ -1,0 +1,25 @@
+<footer class="entry-footer">
+  {% assign cat_count = include.post.categories | size %}
+  {% if cat_count > 0 %}
+  <span class="cat-links">
+    <span class="screen-reader-text">Catégories </span>
+    {% for category in include.post.categories %}
+    <a href="{{ category | slugify | append: "/index.html" | relative_url }}"
+      rel="category">{{ category | replace:'-', ' ' }}</a>
+      {% if forloop.last != true %} / {% endif %}
+    {% endfor %}
+  </span>
+  {% endif %}
+  
+  {% assign tag_count = include.post.tags | size %}
+  {% if tag_count > 0 %}
+  <span class="tags-links">
+    <span class="screen-reader-text">Étiquettes </span>
+    {% for tag in include.post.tags %}
+    <a href="{{ tag | slugify | append: "/index.html" | relative_url }}"
+      rel="tag">{{ tag | replace:'-', ' ' }}</a>
+    {% if forloop.last != true %}, {% endif %}
+    {% endfor %}
+  </span>
+  {% endif %}
+</footer>

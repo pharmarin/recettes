@@ -4,9 +4,9 @@ date: '2020-03-31'
 author: Marin
 tag: []
 ---
-Recette de Pauline (pharmacie des Lions)
+Recette de Pauline (Pharmacie des Lions)
 
-<div class="wp-block-lazyblock-recette lazyblock-recette-23yATb">## Ingrédients
+## Ingrédients
 - 100 g de beurre pommade
 - 80 g de cassonade
 - 1 œuf
