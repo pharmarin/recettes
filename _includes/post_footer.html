@@ -16,7 +16,7 @@
   <span class="tags-links">
     <span class="screen-reader-text">Étiquettes </span>
     {% for tag in include.post.tags %}
-    <a href="{{ tag | slugify | append: "/index.html" | relative_url }}"
+    <a href="{{ tag | slugify | prepend: "/tag/" | append: "/index.html" | relative_url }}"
       rel="tag">{{ tag | replace:'-', ' ' }}</a>
     {% if forloop.last != true %}, {% endif %}
     {% endfor %}
