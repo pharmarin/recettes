@@ -4,7 +4,7 @@
     searchInput: document.getElementById('search-input'),
     resultsContainer: document.getElementById('results-container'),
     json: '{{ "/search.json" | absolute_url }}',
-    searchResultTemplate: '<article class="post type-post status-publish format-standard hentry" style="margin-top: 2em; padding-top: 1em; padding-bottom: 1em;"><header class="entry-header"><h2 class="entry-title" style="margin-bottom: 0;"><a href="{{ site.url }}{{ site.baseurl }}/{url}" rel="bookmark">{title}</a></h2></header></article>',
+    searchResultTemplate: '<article class="post type-post status-publish format-standard hentry" style="margin-top: 2em; padding-top: 1em; padding-bottom: 1em;"><header class="entry-header"><h2 class="entry-title" style="margin-bottom: 0;"><a href="{{ "" | absolute_url }}{url}" rel="bookmark">{title}</a></h2></header></article>',
     noResultsText: '<article class="post type-post status-publish format-standard hentry" style="margin-top: 2em; padding-top: 1em; padding-bottom: 1em;"><header class="entry-header"><h2 class="entry-title" style="margin-bottom: 0;">La recherche n\'a donné aucun résultat...</h2></header></article>'
   })
 </script>
